@@ -1,0 +1,38 @@
+.video {
+  width: 100%;
+
+  &-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-poster {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include transform(translateY(-50%));
+
+    img {
+      display: none;
+    }
+  }
+
+  &-player {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include transform(translateY(-50%));
+  }
+
+  .player {
+    width: 100%;
+  }
+}

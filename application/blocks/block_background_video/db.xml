@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btBlockBackgroundVideo">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="poster" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="videoType" type="C"></field>
+        <field name="video" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="youtube" type="C" size="255"></field>
+        <field name="vimeo" type="C" size="255"></field>
+    </table>
+</schema>

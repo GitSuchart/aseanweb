@@ -1,0 +1,28 @@
+.nav {
+  &-item {
+    padding: 0 10px;
+
+    .main-footer & {
+      padding: 0 20px 0 0;
+    }
+
+    &:last-child {
+      .main-footer & {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &-link {
+    padding: 0;
+
+    .main-footer & {
+      color: $color-white-1;
+      @extend %font-size-small;
+
+      &:hover {
+        color: $color-primary-1;
+      }
+    }
+  }
+}

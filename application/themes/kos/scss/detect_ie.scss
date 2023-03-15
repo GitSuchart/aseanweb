@@ -1,0 +1,141 @@
+// @import "assets/_variables";
+// header,footer,.cookie-pop{
+//     display: none !important;
+// }
+// .detect-ie {
+//     /*padding: 10pc 0;*/
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     @include flex(center,center);
+//     .container{
+//         max-width: 1700px;
+//     }
+//     .text-item{
+//         @media(min-width: 1200px){
+//             padding-right: 50px;
+//         }
+//         >div{
+//             padding-bottom: 50px;
+//             @media(max-width: 1366px){
+//                 padding-bottom: 30px;
+//             }
+//         }
+//         .top{
+//             // font-family: $font-semibold;
+//             font-size: 25px;
+//             color: #000;
+//             letter-spacing: 0;
+//             line-height: 45px;
+//             @media(max-width: 1366px){
+//                 line-height: normal;
+//             }
+//         }
+//         .mid{
+//             // font-family: $font-semibold;
+//             font-size: 60px;
+//             color: #000;
+//             letter-spacing: -1.84px;
+//             line-height: 78px;
+//             padding-right: 10pc;
+//             @media(max-width: 1366px){
+//                 font-size: 50px;
+//                 line-height: normal;
+//                 padding-right: 5pc;
+//             }
+//             @media(max-width: 1279px){
+//                 padding-right: 0;
+//             }
+//             @media(max-width: 575px){
+//                 font-size: 38px;
+//             }
+//         }
+//         .btm{
+//             // font-family: $font-regular;
+//             font-size: 20px;
+//             color: #797A8D;
+//             letter-spacing: -0.3px;
+//             line-height: 32px;
+//             @media(max-width: 1366px){
+//                 font-size: 18px;
+//                 line-height: normal;
+//             }
+//         }
+//         .detect-img{
+//             padding-bottom: 0;
+//             .text{
+//                 // font-family: $font-regular;
+//                 font-size: 15px;
+//                 color: #000;
+//                 letter-spacing: -0.1px;
+//                 text-align: center;
+//                 margin-top: 40px;
+//                 @media(max-width: 767px){
+//                     margin-top: 20px;
+//                 }
+//             }
+//         }
+//         &-right{
+//             padding-left: 50px;
+//             @media(max-width: 1200px){
+//                 position: absolute;
+//                 z-index: -1;
+//                 padding: 0;
+//             }
+//         }
+//     }
+//     .detect-img{
+//         /*background-image: url(../images/detect-ie.png);
+//         background-size: contain;
+//         background-repeat: no-repeat;*/
+
+//         &-browser{
+//             background-size: contain;
+//             background-repeat: no-repeat;
+//             background-position: center;
+//             position: relative;
+//             padding-top: 50%;
+//             @include transition(all .3s);
+//             @media(max-width: 767px){
+//                 padding-top: 40%;     
+//             }
+//             &.chrome{
+//                 background-image: url(../images/Chrome.svg);
+//             }
+//             &.edge{
+//                 background-image: url(../images/Microsoft-edge.svg);
+//             }
+//             &.firefox{
+//                 background-image: url(../images/Firefox.svg);
+//             }
+//             &.safari{
+//                 background-image: url(../images/Safari.svg);
+//             }
+//         }
+//         a{
+//             &:hover{
+//                 ~ .detect-img-browser{
+//                     opacity: 0.85;
+//                 }
+//             }
+//         }
+//         &-right{
+//             background-image: url(../images/detect-ie-img.svg);
+//             background-repeat: no-repeat;
+//             background-size: contain;
+//             background-position: center bottom;
+//             width: 100%;
+//             height: 100%;
+//             position: relative;
+//             @include aspect-ratio(536,452);
+//             //padding-top: 70%;
+//             @media(max-width: 1200px){
+//                 opacity: 0.35;
+//                 background-color: #FFF;
+//                 padding-top: 50%;
+//             }
+//         }
+//     }
+// }

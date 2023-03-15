@@ -1,0 +1,13 @@
+@include keyframes('waves') {
+  0% {
+    @include transform(translateX(0));
+  }
+
+  50% {
+    @include transform(translateX(-25%));
+  }
+
+  100% {
+    @include transform(translateX(-50%));
+  }
+}

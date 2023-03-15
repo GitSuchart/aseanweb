@@ -1,0 +1,212 @@
+.btn {
+  border-radius: 0;
+
+  &-close {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+    background-color: $color-primary-1;
+    border: 1px solid $color-primary-1;
+    opacity: 1;
+    position: relative;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 1px;
+      background-color: $color-white-1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      @extend %transition;
+      @include transform(translate(-50%, -50%) rotate(45deg));
+    }
+
+    &::after {
+      @include transform(translate(-50%, -50%) rotate(-45deg));
+    }
+
+    &:hover {
+      border-color: $color-primary-1;
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        opacity: 1;
+        background-color: $color-primary-1;
+        @extend %transition;
+      }
+    }
+  }
+
+  &-square {
+    width: 100%;
+    padding: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    >span {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include flex(flex, center, center);
+    }
+  }
+
+  &-hamburger {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    position: relative;
+    @extend %transition;
+
+    &:hover {
+      >span {
+        @extend %transition;
+
+        .menu-active & {
+          background-color: transparent;
+        }
+
+        &:first-child,
+        &:last-child {
+          background-color: $color-primary-1;
+        }
+      }
+    }
+
+    >span {
+      display: block;
+      width: 27px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $color-primary-1;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      @extend %transition;
+      @include transform(translate(50%, -50%));
+
+      .menu-active & {
+        background-color: transparent;
+      }
+
+      &:first-child {
+        @extend %transition;
+        @include transform(translate(50%, calc(-50% - 8px)));
+
+        .menu-active & {
+          background-color: $color-primary-1;
+          @include transform(translate(50%, -50%) rotate(45deg));
+        }
+      }
+
+      &:last-child {
+        @extend %transition;
+        @include transform(translate(50%, calc(-50% + 8px)));
+
+        .menu-active & {
+          background-color: $color-primary-1;
+          @include transform(translate(50%, -50%) rotate(-45deg));
+        }
+      }
+    }
+  }
+
+  &-white {
+    padding: 13px 70px 13px 25px;
+    background-color: $color-white-1;
+    border: none;
+    color: $color-primary-1;
+    position: relative;
+    @extend %font-bold;
+
+    .icon {
+      &-plus {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        opacity: 0;
+        @extend %transition;
+        @include flex(flex, center, center);
+        @include transform(translateY(-50%));
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 15px;
+          height: 1px;
+          background-color: $color-white-1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          @include transform(translate(-50%, -50%));
+        }
+
+        &::after {
+          @include transform(translate(-50%, -50%) rotate(90deg));
+        }
+      }
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: $color-primary-1 !important;
+      color: $color-white-1 !important;
+
+      .icon-plus {
+        opacity: 1;
+        @extend %transition;
+      }
+    }
+  }
+
+  &-outline {
+    width: 100%;
+    max-width: 295px;
+    padding: 13px 70px 13px 25px;
+    background-color: rgba($color-black-1, .2);
+    border: 1px solid rgba($color-white-1, .1);
+    color: $color-white-1;
+    text-align: left;
+    position: relative;
+    @extend %font-bold;
+
+    [class^=icon-],
+    [class*=" icon-"] {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      @include transform(translateY(-50%));
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: $color-primary-1 !important;
+      border-color: $color-primary-1 !important;
+      color: $color-white-1 !important;
+    }
+  }
+}

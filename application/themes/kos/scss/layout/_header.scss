@@ -1,0 +1,456 @@
+$header-height: 100px;
+$header-active-height: 70px;
+
+.header {
+  background-color: $color-white-1;
+
+  @media (max-width: 1200px) {
+    padding: 15px 0;
+  }
+
+  @media (max-width: 479px) {
+    padding: 10px 0;
+  }
+
+  &-navigation {
+    &.mobile {
+      @include transition(left .3s);
+
+      @media (max-width: 1200px) {
+        width: 100%;
+        height: calc(100vh - 75px);
+        padding: 30px;
+        background-color: rgba($color-grey-5, .8);
+        overflow-y: auto;
+        position: fixed;
+        top: 75px;
+        left: 100%;
+      }
+
+      @media (max-width: 479px) {
+        top: 65px;
+      }
+
+      .menu-active & {
+        @include transition(left .3s);
+
+        @media (max-width: 1200px) {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &-search {
+    position: relative;
+    padding-left: 10px;
+
+    @media (max-width: 1200px) {
+      padding-left: 0;
+      padding-right: 15px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 12px;
+      background-color: $color-grey-3;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include transform(translateY(-50%));
+
+      @media (max-width: 1200px) {
+        left: auto;
+        right: 0;
+        display: none;
+      }
+
+    }
+
+    .form {
+      width: 100vw;
+      padding: 20px 30px;
+      background-color: $color-grey-1;
+      position: absolute;
+      top: 100%;
+      right: -100px;
+      opacity: 0;
+      visibility: hidden;
+      @extend %transition;
+
+      @media (max-width: 1200px) {
+        padding: 15px 30px;
+        top: calc(100% + 15px);
+        right: -75px;
+      }
+
+      .search-active & {
+        opacity: 1;
+        visibility: visible;
+        @extend %transition;
+      }
+
+      &-container {
+        width: 100%;
+        position: relative;
+        padding: 0 75px;
+      }
+
+      &-group {
+        max-width: 960px;
+        margin: 0 auto;
+
+        @media (max-width: 1200px) {
+          max-width: 600px;
+        }
+
+        .btn {
+          &-submit {
+            width: 62px;
+            height: 60px;
+            padding: 0;
+            background-color: $color-white-1;
+            border: 1px solid $color-grey-5;
+            border-left: none;
+            box-sizing: border-box;
+            position: relative;
+
+            @media (max-width: 1200px) {
+              width: 42px;
+              height: 40px;
+            }
+
+            span {
+              width: 100%;
+              height: 100%;
+              font-size: 18px;
+              line-height: 1;
+              color: $color-primary-1;
+              position: absolute;
+              top: 0;
+              left: 0;
+              @include flex(flex, center, center);
+
+              @media (max-width: 1200px) {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      &-action {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+
+  &-other {
+    @include transition(height .3s);
+
+    .mode-edit & {
+      height: $header-height;
+      @include flex(flex, null, center);
+    }
+
+    .scroll-active & {
+      height: $header-active-height;
+      @include transition(height .3s);
+    }
+  }
+
+  .nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    >li {
+      padding: 0 1vw;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+        padding: 0;
+      }
+
+      a {
+        color: $color-black-1;
+        @extend %font-size-button-2;
+
+        @media (max-width: 1200px) {
+          font-size: 18px;
+          line-height: 1;
+        }
+
+        &:hover {
+          color: $color-primary-1;
+        }
+      }
+
+      >a {
+        height: $header-height;
+        @extend %font-bold;
+        @include transition(height .3s);
+        @include flex(flex, center, center);
+
+        .scroll-active & {
+          height: $header-active-height;
+          @include transition(height .3s);
+        }
+
+        @media (max-width: 1200px) {
+          height: auto;
+        }
+      }
+
+      &.nav-dropdown {
+        .level-1 {
+          opacity: 0;
+          visibility: hidden;
+
+          @media (max-width: 1200px) {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &:hover {
+          .level-1 {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      &:last-child {
+        padding-right: 2.5vw;
+
+        @media (max-width: 1200px) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .level {
+      &-1 {
+        width: 100%;
+        padding: 40px calc((100% - 880px) / 2);
+        background-color: rgba($color-grey-5, .8);
+
+        position: absolute;
+        left: 0;
+        top: 100%;
+        @include flex(flex);
+
+        @media (max-width: 1200px) {
+          padding: 0;
+          position: inherit;
+          left: auto;
+          top: auto;
+          background-color: transparent;
+          @include flex(block);
+        }
+
+        >li {
+          width: calc((100% - 200px) / 2);
+          padding-left: 40px;
+
+          @media (max-width: 1200px) {
+            width: 100%;
+            padding: 0;
+          }
+
+          a {
+            color: $color-grey-3;
+
+            &:hover {
+              color: $color-primary-1;
+            }
+          }
+
+          >a {
+            color: $color-black-1;
+            @extend %font-bold, %font-size-normal;
+          }
+
+          &.info {
+            width: 200px;
+            padding-left: 0;
+
+            @media (max-width: 1200px) {
+              display: none;
+            }
+
+            @include header {
+              margin-bottom: 15px;
+              line-height: 1;
+              @extend %font-bold, %font-size-h2;
+            }
+
+            a {
+              color: $color-grey-3;
+              @extend %font-size-button-2;
+
+              &:hover {
+                color: $color-primary-1;
+              }
+            }
+          }
+        }
+      }
+
+      &-2 {
+        margin-top: 15px;
+
+        >li {
+          margin-bottom: 5px;
+        }
+
+        &.nav-column {
+          @include flex(flex, null, null, wrap);
+
+          >li {
+            width: 50%;
+            padding-right: 15px;
+
+            @media (max-width: 1200px) {
+              width: 100%;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar {
+    @media (max-width: 1200px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (max-width: 479px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-brand {
+      width: calc(230px + 50px);
+      margin: 0;
+      padding: 0 0 0 50px;
+      position: relative;
+      z-index: 2;
+      @include transition(width .3s);
+
+      .scroll-active & {
+        width: calc(200px + 50px);
+        @include transition(width .3s);
+      }
+
+      @media (max-width: 1200px) {
+        width: 200px;
+        padding: 0;
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-container {
+      width: calc(100% - (230px + 50px));
+
+      @media (max-width: 1200px) {
+        width: auto;
+      }
+    }
+  }
+
+  .btn {
+    &-square {
+      width: 100vw;
+      height: $header-height;
+      max-width: $header-height;
+      border: none;
+      @include transition(height .3s);
+
+      @media (max-width: 1200px) {
+        width: 100vw;
+        padding: 0;
+        max-width: 45px;
+      }
+
+      .scroll-active & {
+        height: $header-active-height;
+        @include transition(height .3s);
+      }
+
+      &.search {
+        color: $color-black-1;
+        font-size: 18px;
+
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: $color-primary-1;
+        }
+      }
+
+      &.other {
+        line-height: 1;
+        color: $color-white-1;
+        border: none;
+        background-color: $color-primary-1;
+
+        svg {
+          position: absolute;
+          top: 7px;
+          right: 7px;
+
+          path {
+            fill: $color-blue-2;
+            @extend %transition;
+          }
+
+          rect {
+            stroke: $color-blue-2;
+            @extend %transition;
+          }
+        }
+
+        &:hover {
+          color: $color-primary-1;
+          background-color: transparent;
+          @extend %transition;
+
+          svg {
+            path {
+              fill: $color-primary-1;
+              @extend %transition;
+            }
+
+            rect {
+              stroke: $color-primary-1;
+              @extend %transition;
+            }
+          }
+        }
+      }
+    }
+  }
+}

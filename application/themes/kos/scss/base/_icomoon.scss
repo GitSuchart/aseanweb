@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon/icomoon.eot?yzergk');
+  src: url('../fonts/icomoon/icomoon.eot?yzergk#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?yzergk') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?yzergk') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?yzergk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-global:before {
+  content: "\e90c";
+}
+
+.icon-museum:before {
+  content: "\e906";
+}
+
+.icon-search:before {
+  content: "\e907";
+}
+
+.icon-full-arrow-right:before {
+  content: "\e908";
+}
+
+.icon-filter:before {
+  content: "\e909";
+}
+
+.icon-users:before {
+  content: "\e90a";
+}
+
+.icon-crown:before {
+  content: "\e90b";
+}
+
+.icon-arrow-down:before {
+  content: "\e901";
+}
+
+.icon-arrow-up:before {
+  content: "\e902";
+}
+
+.icon-angle-down:before {
+  content: "\e900";
+}
+
+.icon-chevron-left:before {
+  content: "\e903";
+}
+
+.icon-chevron-right:before {
+  content: "\e904";
+}
+
+.icon-close:before {
+  content: "\e905";
+}
+
+.icon-youtube:before {
+  content: "\e90e";
+}

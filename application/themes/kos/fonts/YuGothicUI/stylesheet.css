@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('YuGothicUI-Light.eot');
+    src: url('YuGothicUI-Light.eot?#iefix') format('embedded-opentype'),
+        url('YuGothicUI-Light.woff2') format('woff2'),
+        url('YuGothicUI-Light.woff') format('woff'),
+        url('YuGothicUI-Light.ttf') format('truetype'),
+        url('YuGothicUI-Light.svg#YuGothicUI-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('YuGothicUI-Bold.eot');
+    src: url('YuGothicUI-Bold.eot?#iefix') format('embedded-opentype'),
+        url('YuGothicUI-Bold.woff2') format('woff2'),
+        url('YuGothicUI-Bold.woff') format('woff'),
+        url('YuGothicUI-Bold.ttf') format('truetype'),
+        url('YuGothicUI-Bold.svg#YuGothicUI-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic UI';
+    src: url('YuGothicUI-Regular.eot');
+    src: url('YuGothicUI-Regular.eot?#iefix') format('embedded-opentype'),
+        url('YuGothicUI-Regular.woff2') format('woff2'),
+        url('YuGothicUI-Regular.woff') format('woff'),
+        url('YuGothicUI-Regular.ttf') format('truetype'),
+        url('YuGothicUI-Regular.svg#YuGothicUI-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

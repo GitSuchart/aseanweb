@@ -1,0 +1,127 @@
+// $width-container: 1024px;
+// $width-container-767: 100%;
+
+// $padding-container: 50px;
+// $padding-container-767: 30px;
+// $padding-container-479: 20px;
+
+// %padding-container {
+//   padding-left: $padding-container;
+//   padding-right: $padding-container;
+
+//   @media (max-width: 767px) {
+//     padding-left: $padding-container-767;
+//     padding-right: $padding-container-767;
+//   }
+
+//   @media (max-width: 479px) {
+//     padding-left: $padding-container-479;
+//     padding-right: $padding-container-479;
+//   }
+// }
+
+// @media (max-width: 575px) {
+//   .container {
+//     max-width: $width-container-767;
+//   }
+// }
+
+// @media (min-width: 576px) {
+
+//   .container-sm,
+//   .container {
+//     max-width: $width-container-767;
+//   }
+// }
+
+// @media (min-width: 768px) {
+
+//   .container-md,
+//   .container-sm,
+//   .container {
+//     // max-width: 720px;
+//     max-width: $width-container-767;
+//   }
+// }
+
+// @media (min-width: 992px) {
+
+//   .container-lg,
+//   .container-md,
+//   .container-sm,
+//   .container {
+//     // max-width: 960px;
+//     max-width: $width-container;
+//   }
+// }
+
+// @media (min-width: 1200px) {
+
+//   .container-xl,
+//   .container-lg,
+//   .container-md,
+//   .container-sm,
+//   .container {
+//     // max-width: 1140px;
+//     max-width: $width-container;
+//   }
+// }
+
+@media (min-width: 1400px) {
+
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    // max-width: 1140px;
+    max-width: 1370px;
+    // max-width: $width-container;
+  }
+}
+
+@media (min-width: 1500px) {
+
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    // max-width: 1320px;
+    max-width: 1550px;
+    // max-width: $width-container;
+  }
+}
+
+// .container-xxl,
+// .container-xl,
+// .container-lg,
+// .container-md,
+// .container-sm,
+// .container {
+//   @extend %padding-container;
+// }
+
+// // .container-fluid {
+// //   padding-left: 0;
+// //   padding-right: 0;
+
+// //   >.row {
+// //     margin-left: 0;
+// //     margin-right: 0;
+// //   }
+// // }
+@media (max-width: 767px) {
+
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    // max-width: 1320px;
+    max-width: 100%;
+  }
+}
